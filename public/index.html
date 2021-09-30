@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Server</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+</head>
+<body class="container">
+
+    <h1 class="mt-5">Acceso denegado</h1>
+    <hr>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js" integrity="sha512-PU5S6BA03fRv1Q5fpwXjg5nlRrgdoguZ74urFInkbABMCENyx5oP3hrDzYMMPh3qdLdknIvrGj3yqZ4JuU7Nag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script>
+        // Conexión con el socket server
+        const socket = io('http://localhost:4000');
+
+        
+        /// Para emitir
+        // socket.emit('msg-to-server', { data' })
+        
+        // Para escuchar
+        socket.on('msg-from-server', (data) => {
+            // Evento a disparar
+            // console.log('Server', data)
+        });
+        
+
+    </script>
+    
+</body>
+</html>
